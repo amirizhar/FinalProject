@@ -46,10 +46,10 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <nav class="main-nav" style="border-spacing: 5px;">
+                        <nav class="main-nav" style="margin-top: 1em;">
                             <!-- ***** Logo Start ***** -->
                             <a href="/redirect" class="logo">
-                                <img src="assets/images/ogo-uniten.png" style="height:50px"  align="klassy cafe html template">
+                                <img src="assets/images/5956592.png" style="height:60px"  align="klassy cafe html template">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Main Page - Admin</title>
+    <title>Main Page</title>
 <!--
     
 TemplateMo 558 Klassy Cafe
@@ -48,14 +48,14 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="col-12">
                         <nav class="main-nav" style="border-spacing: 5px;">
                             <!-- ***** Logo Start ***** -->
-                            <a href="/redirect" class="logo">
-                                <img src="assets/images/ogo-uniten.png" style="height:50px"  align="klassy cafe html template">
+                            <a href="/" class="logo">
+                                <img src="assets/images/logo-uniten.png" style="height:50px"  align="klassy cafe html template">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                {{-- <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="#about">About</a></li> --}}
+                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                                <li class="scroll-to-section"><a href="#about">About</a></li> 
                                    
                             <!-- 
                                 <li class="submenu">

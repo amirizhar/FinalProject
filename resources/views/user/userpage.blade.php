@@ -1,85 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+       
+    <!-- ***** Header Area Start ***** -->
+    <x-user-header/>
+    <!-- ***** Header Area End ***** -->
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!--
-    
-TemplateMo 558 Klassy Cafe
-
-https://templatemo.com/tm-558-klassy-cafe
-
--->
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
-
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
-
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-
-    </head>
-    
-    <body>
-    
-    <x-main-header/>
-
-        <!-- ***** Main Banner Area Start ***** -->
-        <div id="top">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="left-content">
-                            <div class="inner-content">
-                                <h4>Collage of Computing and Informatic</h4>
-                                <h6>Management System</h6>
-                                {{-- <div class="main-white-button scroll-to-section">
-                                    <a href="#reservation">Make A Reservation</a>
-                                </div> --}}
+    <!-- ***** Main Banner Area Start ***** -->
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4>KlassyCafe</h4>
+                            <h6>THE BEST EXPERIENCE</h6>
+                            <div class="main-white-button scroll-to-section">
+                                <a href="#reservation">Make A Reservation</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="main-banner header-text">
-                            <div class="Modern-Slider">
-                              <!-- Item -->
-                              <div class="item">
-                                <div class="img-fill">
-                                    <img src="assets/images/olRwW9.webp" alt="">
-                                </div>
-                              </div>
-                              <!-- // Item -->
-                              <!-- Item -->
-                              <div class="item">
-                                <div class="img-fill">
-                                    <img src="assets/images/1463436.webp" alt="">
-                                </div>
-                              </div>
-                              <!-- // Item -->
-                              <!-- Item -->
-                              <div class="item">
-                                <div class="img-fill">
-                                    <img src="assets/images/machine_learning-1013x810.webp" alt="">
-                                </div>
-                              </div>
-                              <!-- // Item -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-01.jpg" alt="">
                             </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-02.jpg" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="assets/images/slide-03.jpg" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ***** Main Banner Area End ***** -->
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** About Area Starts ***** -->
     <section class="section" id="about">
@@ -88,11 +59,11 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>About</h6>
-                            <h2>Final Year Project</h2>
+                            <h6>About Us</h6>
+                            <h2>We Leave A Delicious Memory For You</h2>
                         </div>
-                        <p>Final Year Project (FYP) is a compulsory course for all CCI diploma and degree programs. To graduate, students need to at least pass FYP course. </p>
-                        {{-- <div class="row">
+                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
                             </div>
@@ -102,14 +73,14 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-03.jpg" alt="">
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
                         <div class="thumb">
-                            <a rel="nofollow" href="https://www.youtube.com/watch?v=A3VdQfbL4xg"><i class="fa fa-play"></i></a>
-                            <img src="assets/images/whatsapp-image-2018-02-06-at-11-05-03-am.jpeg" alt="">
+                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                            <img src="assets/images/about-video-bg.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -119,7 +90,7 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- ***** About Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
-    {{-- <section class="section" id="menu">
+    <section class="section" id="menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -208,7 +179,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- ***** Menu Area Ends ***** -->
 
     <!-- ***** Chefs Area Starts ***** -->
@@ -217,8 +188,8 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
-                        <h6>Senior Lecturer</h6>
-                        <h2>Replace with CCI punya orang</h2>
+                        <h6>Our Chefs</h6>
+                        <h2>We offer the best ingredients for you</h2>
                     </div>
                 </div>
             </div>
@@ -287,7 +258,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>Contact Us</h6>
-                            <h2>College of Computing and Informatics</h2>
+                            <h2>Here You Can Make A Reservation Or Just walkin to our cafe</h2>
                         </div>
                         <p>Donec pretium est orci, non vulputate arcu hendrerit a. Fusce a eleifend riqsie, namei sollicitudin urna diam, sed commodo purus porta ut.</p>
                         <div class="row">
@@ -295,14 +266,14 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <div class="phone">
                                     <i class="fa fa-phone"></i>
                                     <h4>Phone Numbers</h4>
-                                    <span><a href="#">T: +603-8921 2020</a><br><a href="#">T: +609-455 2020</a></span>
+                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">sarinah@uniten.edu.my</a><br><a href="#">Wahida@uniten.edu.my</a></span>
+                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -310,7 +281,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        {{-- <form id="contact" action="" method="post">
+                        <form id="contact" action="" method="post">
                           <div class="row">
                             <div class="col-lg-12">
                                 <h4>Table Reservation</h4>
@@ -381,7 +352,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </div>
                           </div>
                         </form>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
