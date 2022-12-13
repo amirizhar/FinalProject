@@ -217,8 +217,8 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
-                        <h6>Senior Lecturer</h6>
-                        <h2>Replace with CCI punya orang</h2>
+                        <h6>College of Computing and Informatic</h6>
+                        <h2>HIGH MANAGEMENT</h2>
                     </div>
                 </div>
             </div>
@@ -232,11 +232,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-01.jpg" alt="Chef #1">
+                            <img src="assets/images/cci-prof-dr-zainuddin-hassan-01.jpg" alt="Chef #1">
                         </div>
                         <div class="down-content">
-                            <h4>Randy Walker</h4>
-                            <span>Pastry Chef</span>
+                            <h4>Zainuddin bin Hassan</h4>
+                            <span>Dean, College of Computing & Informatics (CCI)</span>
                         </div>
                     </div>
                 </div>
@@ -249,11 +249,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-02.jpg" alt="Chef #2">
+                            <img src="assets/images/cci-dr-asmidar-abu-bakar-01.jpg" alt="Chef #2">
                         </div>
                         <div class="down-content">
-                            <h4>David Martin</h4>
-                            <span>Cookie Chef</span>
+                            <h4>Asmidar AbuBakar</h4>
+                            <span>Deputy Dean</span>
                         </div>
                     </div>
                 </div>
@@ -266,11 +266,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-03.jpg" alt="Chef #3">
+                            <img src="assets/images/cci-ts-dr-mohd-hazli-mohamed-zabil-01.jpg" alt="Chef #3">
                         </div>
                         <div class="down-content">
-                            <h4>Peter Perkson</h4>
-                            <span>Pancake Chef</span>
+                            <h4>Mohd Hazli Bin Mohamed Zabil</h4>
+                            <span>Deputy Dean</span>
                         </div>
                     </div>
                 </div>
@@ -308,8 +308,8 @@ https://templatemo.com/tm-558-klassy-cafe
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
+                {{-- <div class="col-lg-6">
+                    <div class="contact-form"> --}}
                         {{-- <form id="contact" action="" method="post">
                           <div class="row">
                             <div class="col-lg-12">
@@ -382,14 +382,14 @@ https://templatemo.com/tm-558-klassy-cafe
                           </div>
                         </form>
                     </div> --}}
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </section>
     <!-- ***** Reservation Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="offers">
+    {{-- <section class="section" id="offers">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
@@ -651,7 +651,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- ***** Chefs Area Ends ***** --> 
     
     <!-- ***** Footer Start ***** -->
@@ -670,12 +670,12 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                        <a href="/"><img src="assets/images/logo-uniten.png" style="height: 70px" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
+                        <p>© Copyright CCI Uniten
                         
                         <br>Design: TemplateMo</p>
                     </div>

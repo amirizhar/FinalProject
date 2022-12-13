@@ -49,7 +49,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         <nav class="main-nav" style="border-spacing: 5px;">
                             <!-- ***** Logo Start ***** -->
                             <a href="/redirect" class="logo">
-                                <img src="assets/images/ogo-uniten.png" style="height:50px"  align="klassy cafe html template">
+                                <img src="assets/images/logo-uniten.png" style="height:50px"  align="klassy cafe html template">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
