@@ -49,36 +49,13 @@ https://templatemo.com/tm-558-klassy-cafe
                         <nav class="main-nav" style="border-spacing: 5px;">
                             <!-- ***** Logo Start ***** -->
                             <a href="/" class="logo">
-                                <img src="assets/images/logo-uniten.png" style="height:50px"  align="klassy cafe html template">
+                                <img src="assets/images/logo-uniten.png" style="height:70px"  align="klassy cafe html template">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                                 <li class="scroll-to-section"><a href="#about">About</a></li> 
-                                   
-                            <!-- 
-                                <li class="submenu">
-                                    <a href="javascript:;">Drop Down</a>
-                                    <ul>
-                                        <li><a href="#">Drop Down Page 1</a></li>
-                                        <li><a href="#">Drop Down Page 2</a></li>
-                                        <li><a href="#">Drop Down Page 3</a></li>
-                                    </ul>
-                                </li>
-                            -->
-                                {{-- <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                                <li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
-                                <li class="submenu">
-                                    <a href="javascript:;">Features</a>
-                                    <ul>
-                                        <li><a href="#">Features Page 1</a></li>
-                                        <li><a href="#">Features Page 2</a></li>
-                                        <li><a href="#">Features Page 3</a></li>
-                                        <li><a href="#">Features Page 4</a></li>
-                                    </ul>
-                                </li> --}}
-                                <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                                 <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
                                 <li>
                                     @if (Route::has('login'))
@@ -91,9 +68,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                             @else
                                                 <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></li>
                         
-                                                @if (Route::has('register'))
+                                                {{-- @if (Route::has('register'))
                                                     <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                                @endif
+                                                @endif --}}
                                             @endauth
                                         </div>
                                     @endif
