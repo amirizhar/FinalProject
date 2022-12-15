@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\createProject;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeControl;
+use App\Http\Controllers\updateProject;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,8 @@ Route::get('/', function () {
 Route::get("/home",[homeControl::class,"index"]);
 Route::get("/",[homeControl::class,"index"]);
 Route::get("/redirect",[homeControl::class,"redirectFunct"]);
+Route::get("/addProject",[createProject::class,"index"]);
+Route::get("/updateProject",[updateProject::class,"index"]);
 
 Route::middleware([
     'auth:sanctum',

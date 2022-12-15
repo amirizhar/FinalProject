@@ -16,10 +16,10 @@ class homeControl extends Controller
         $typeuser=Auth::user()->usertype;
 
         if($typeuser=='1'){
-            return view('admin.adminpage');
+            return view('coordinator.adminpage');
         }
         else{
-            return view('user.userpage');
+            return view('lecturer.userpage');
         }
     }
 }
