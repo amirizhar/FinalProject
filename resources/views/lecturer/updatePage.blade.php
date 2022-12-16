@@ -3,12 +3,12 @@
 
 <head>
     <!-- Required meta tags -->
-    @include('coordinator.admincss')
+    @include('lecturer.usercss')
 </head>
 
 <body>
     <div class="container-scroller">
-        @include('coordinator.navbar')
+        @include('lecturer.navbar')
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -23,7 +23,7 @@
 
                                         <div class="container">
 
-                                            <form class="well form-horizontal" action="/createProject" method="post" id="contact_form">
+                                            <form class="well form-horizontal" action="/edit" method="post" id="contact_form">
                                             @csrf
                                                 
                                                 <fieldset>
@@ -37,9 +37,9 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i
                                                                         class="glyphicon glyphicon-user"></i></span>
-                                                                <input name="id"
+                                                                <input type="hidden" name="id" value="{{$disp['$id']}}"
                                                                     placeholder="id"
-                                                                    class="form-control" type="text">
+                                                                    class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -54,7 +54,7 @@
                                                                                 class="glyphicon glyphicon-user"></i></span>
                                                                         <input name="project_title"
                                                                             placeholder="Project Title"
-                                                                            class="form-control" type="text">
+                                                                            class="form-control" type="text" value="{{$disp['$project_title']}}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -68,7 +68,7 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-user"></i></span>
                                                                         <input name="start_date" placeholder="Last Name"
-                                                                            class="form-control" type="date">
+                                                                            class="form-control" type="date" value="{{$disp['$start_date']}}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -81,7 +81,7 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-envelope"></i></span>
                                                                         <input name="end_date" placeholder="End Date"
-                                                                            class="form-control" type="date">
+                                                                            class="form-control" type="date" value="{{$disp['$end_date']}}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -96,7 +96,7 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-earphone"></i></span>
                                                                         <input name="duration" placeholder="Duration"
-                                                                            class="form-control" type="text">
+                                                                            class="form-control" type="text" value="{{$disp['$duration']}}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -112,7 +112,7 @@
                                                                                 class="glyphicon glyphicon-home"></i></span>
                                                                         <input name="student_name"
                                                                             placeholder="Student Name"
-                                                                            class="form-control" type="text">
+                                                                            class="form-control" type="text" value="{{$disp['$student_name']}}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -230,14 +230,14 @@
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->
-    @include('coordinator.footer')
+    @include('lecturer.footer')
     <!-- partial -->
     </div>
     <!-- main-panel ends -->
     </div>
     <!-- page-body-wrapper ends -->
     </div>
-    @include('coordinator.adminscript')
+    @include('lecturer.userscript')
 </body>
 
 </html>

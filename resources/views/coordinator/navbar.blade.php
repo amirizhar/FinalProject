@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="redirect"><img style="height:65px;" src="assets/images/logo-uniten.png"
+        <a class="sidebar-brand brand-logo" href="/redirect"><img style="height:65px;" src="assets/images/logo-uniten.png"
                 alt="logo" /></a>
         <a class="sidebar-brand brand-logo-mini" href="redirect"><img src="assets/images/logo-uniten.png"
                 alt="logo" /></a>

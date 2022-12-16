@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\createProject;
+use App\Http\Controllers\fetchProject;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeControl;
 use App\Http\Controllers\updateProject;
@@ -16,16 +17,6 @@ use App\Http\Controllers\updateProject;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get("/home",[homeControl::class,"index"]);
-Route::get("/",[homeControl::class,"index"]);
-Route::get("/redirect",[homeControl::class,"redirectFunct"]);
-Route::get("/addProject",[createProject::class,"index"]);
-Route::get("/updateProject",[updateProject::class,"index"]);
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -35,3 +26,14 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get("/",[homeControl::class,"index"]);
+Route::get("/redirect",[homeControl::class,"redirectFunct"]);
+Route::get("/addProject",[createProject::class,"index"]);
+Route::POST("/createProject",[createProject::class,"addProject"]);
+Route::get("/showCoordinator",[fetchProject::class,"showCoordinator"]);
+Route::get("/showLecturer",[fetchProject::class,"showLecturer"]);
+Route::get("updateProject",[updateProject::class,"displayProject"]);
+
+Route::get("upd/{id}",[updateProject::class,"displayProject"]);
+Route::get("/edit",[updateProject::class,"update"]);
