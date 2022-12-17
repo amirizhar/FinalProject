@@ -37,7 +37,7 @@
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><i
                                                                         class="glyphicon glyphicon-user"></i></span>
-                                                                <input name="id"
+                                                                <input style='color:black; background-color:azure' name="id"
                                                                     placeholder="id"
                                                                     class="form-control" type="text">
                                                             </div>
@@ -52,7 +52,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-user"></i></span>
-                                                                        <input name="project_title"
+                                                                        <input style='color:black; background-color:azure' name="project_title"
                                                                             placeholder="Project Title"
                                                                             class="form-control" type="text">
                                                                     </div>
@@ -67,7 +67,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-user"></i></span>
-                                                                        <input name="start_date" placeholder="Last Name"
+                                                                        <input style='color:black; background-color:azure' name="start_date" placeholder="Last Name"
                                                                             class="form-control" type="date">
                                                                     </div>
                                                                 </div>
@@ -80,7 +80,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-envelope"></i></span>
-                                                                        <input name="end_date" placeholder="End Date"
+                                                                        <input style='color:black; background-color:azure' name="end_date" placeholder="End Date"
                                                                             class="form-control" type="date">
                                                                     </div>
                                                                 </div>
@@ -95,7 +95,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-earphone"></i></span>
-                                                                        <input name="duration" placeholder="Duration"
+                                                                        <input style='color:black; background-color:azure' name="duration" placeholder="Duration"
                                                                             class="form-control" type="text">
                                                                     </div>
                                                                 </div>
@@ -110,7 +110,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-home"></i></span>
-                                                                        <input name="student_name"
+                                                                        <input style='color:black; background-color:azure' name="student_name"
                                                                             placeholder="Student Name"
                                                                             class="form-control" type="text">
                                                                     </div>
@@ -126,7 +126,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-list"></i></span>
-                                                                        <select name="project_type"
+                                                                        <select style='color:black; background-color:azure' name="project_type"
                                                                             class="form-control selectpicker">
                                                                             <option value="">Project Type</option>
                                                                             <option>Development</option>
@@ -142,7 +142,7 @@
                                                                         <div class="input-group">
                                                                             <span class="input-group-addon"><i
                                                                                     class="glyphicon glyphicon-list"></i></span>
-                                                                            <select name="supervisor"
+                                                                            <select style='color:black; background-color:azure' name="supervisor"
                                                                                 class="form-control selectpicker">
                                                                                 <option value=" ">Project
                                                                                     Supervisor</option>
@@ -162,7 +162,7 @@
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon"><i
                                                                                         class="glyphicon glyphicon-list"></i></span>
-                                                                                <select name="examiner_1"
+                                                                                <select style='color:black; background-color:azure' name="examiner_1"
                                                                                     class="form-control selectpicker">
                                                                                     <option value=" ">Examiner 1
                                                                                     </option>
@@ -183,7 +183,7 @@
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon"><i
                                                                                             class="glyphicon glyphicon-list"></i></span>
-                                                                                    <select name="examiner_2"
+                                                                                    <select style='color:black; background-color:azure' name="examiner_2"
                                                                                         class="form-control selectpicker">
                                                                                         <option value=" ">Examiner
                                                                                             2</option>

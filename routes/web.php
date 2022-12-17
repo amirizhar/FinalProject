@@ -29,11 +29,13 @@ Route::middleware([
 
 Route::get("/",[homeControl::class,"index"]);
 Route::get("/redirect",[homeControl::class,"redirectFunct"]);
+
 Route::get("/addProject",[createProject::class,"index"]);
 Route::POST("/createProject",[createProject::class,"addProject"]);
+
 Route::get("/showCoordinator",[fetchProject::class,"showCoordinator"]);
 Route::get("/showLecturer",[fetchProject::class,"showLecturer"]);
-Route::get("updateProject",[updateProject::class,"displayProject"]);
 
+Route::get("updateProject",[updateProject::class,"displayProject"]);
 Route::get("upd/{id}",[updateProject::class,"displayProject"]);
 Route::get("/edit",[updateProject::class,"update"]);
