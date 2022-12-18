@@ -30,19 +30,6 @@
 
                                                     <div class="float-container">
                                                         <div class="float-child">
-                                                    <div class="form-group">
-                                                        <label class="col-md-4 control-label">Project
-                                                            ID</label>
-                                                        <div class="col-md-4 inputGroupContainer">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i
-                                                                        class="glyphicon glyphicon-user"></i></span>
-                                                                <input style='color:black; background-color:azure' name="id"
-                                                                    placeholder="id"
-                                                                    class="form-control" type="text">
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
                                                     <!-- Text input-->
                                                             <div class="form-group">
@@ -55,33 +42,6 @@
                                                                         <input style='color:black; background-color:azure' name="project_title"
                                                                             placeholder="Project Title"
                                                                             class="form-control" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Text input-->
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Start Date</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-user"></i></span>
-                                                                        <input style='color:black; background-color:azure' name="start_date" placeholder="Last Name"
-                                                                            class="form-control" type="date">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Text input-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">End Date</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-envelope"></i></span>
-                                                                        <input style='color:black; background-color:azure' name="end_date" placeholder="End Date"
-                                                                            class="form-control" type="date">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -128,7 +88,7 @@
                                                                                 class="glyphicon glyphicon-list"></i></span>
                                                                         <select style='color:black; background-color:azure' name="project_type"
                                                                             class="form-control selectpicker">
-                                                                            <option value="">Project Type</option>
+                                                                            <option value="">Select</option>
                                                                             <option>Development</option>
                                                                             <option>Research</option>
                                                                         </select>
@@ -144,8 +104,7 @@
                                                                                     class="glyphicon glyphicon-list"></i></span>
                                                                             <select style='color:black; background-color:azure' name="supervisor"
                                                                                 class="form-control selectpicker">
-                                                                                <option value=" ">Project
-                                                                                    Supervisor</option>
+                                                                                <option value=" ">Select</option>
                                                                                 <option>Alabama</option>
                                                                                 <option>Alaska</option>
                                                                                 <option>Arizona</option>
@@ -164,7 +123,7 @@
                                                                                         class="glyphicon glyphicon-list"></i></span>
                                                                                 <select style='color:black; background-color:azure' name="examiner_1"
                                                                                     class="form-control selectpicker">
-                                                                                    <option value=" ">Examiner 1
+                                                                                    <option value=" ">Select
                                                                                     </option>
                                                                                     <option>Alabama</option>
                                                                                     <option>Alaska</option>
@@ -185,8 +144,8 @@
                                                                                             class="glyphicon glyphicon-list"></i></span>
                                                                                     <select style='color:black; background-color:azure' name="examiner_2"
                                                                                         class="form-control selectpicker">
-                                                                                        <option value=" ">Examiner
-                                                                                            2</option>
+                                                                                        <option value=" ">Select
+                                                                                            </option>
                                                                                         <option>Alabama</option>
                                                                                         <option>Alaska</option>
                                                                                         <option>Arizona</option>

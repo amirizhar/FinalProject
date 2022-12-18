@@ -25,11 +25,13 @@
                                                     <tr>
                                                         {{-- <th> id </th> --}}
                                                         <th> Title </th>
-                                                        <th> Start Date </th>
-                                                        <th> End Date </th>
+                                                        {{-- <th> Start Date </th> --}}
+                                                        {{-- <th> End Date </th> --}}
                                                         <th> Duration </th>
                                                         <th> Student </th>
                                                         <th> Type </th>
+                                                        <th> Progress </th>
+                                                        <th> Status </th>
                                                         <th> Supervisor </th>
                                                         <th> Examiner 1 </th>
                                                         <th> Examiner 2 </th>
@@ -40,11 +42,13 @@
                                                         <tr>
                                                             {{-- <td> {{ $x['id'] }}</td> --}}
                                                             <td> {{ $x['project_title'] }}</td>
-                                                            <td> {{ $x['start_date'] }}</td>
-                                                            <td> {{ $x['end_date'] }}</td>
+                                                            {{-- <td> {{ $x['start_date'] }}</td> --}}
+                                                            {{-- <td> {{ $x['end_date'] }}</td> --}}
                                                             <td> {{ $x['duration'] }}</td>
                                                             <td> {{ $x['student_name'] }}</td>
                                                             <td> {{ $x['project_type'] }}</td>
+                                                            <td> {{ $x['project_progress'] }}</td>
+                                                            <td> {{ $x['project_status'] }}</td>
                                                             <td> {{ $x['supervisor'] }}</td>
                                                             <td> {{ $x['examiner_1'] }}</td>
                                                             <td> {{ $x['examiner_2'] }}</td>

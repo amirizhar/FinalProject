@@ -41,7 +41,7 @@
                                 <th> Duration </th>
                                 <th> Student </th>
                                 <th> Type </th>
-                                <th> Supervisor </th>
+                                {{-- <th> Supervisor </th> --}}
                                 <th> Examiner 1 </th>
                                 <th> Examiner 2 </th>
                                 <th> Operation </th>
@@ -57,7 +57,7 @@
                                     <td> {{ $x['duration'] }}</td>
                                     <td> {{ $x['student_name'] }}</td>
                                     <td> {{ $x['project_type'] }}</td>
-                                    <td> {{ $x['supervisor'] }}</td>
+                                    {{-- <td> {{ $x['supervisor'] }}</td> --}}
                                     <td> {{ $x['examiner_1'] }}</td>
                                     <td> {{ $x['examiner_2'] }}</td>
                                     <td style="font-weight:bold;"><a href={{ "upd/".$x['id']}}>Update</a></td>

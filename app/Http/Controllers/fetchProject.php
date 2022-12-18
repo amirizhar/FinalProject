@@ -18,5 +18,6 @@ class fetchProject extends Controller
     {
         $output=Project::all();
         return view('lecturer.userpage',['senarai'=>$output]);
+
     }
 }
