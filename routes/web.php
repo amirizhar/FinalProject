@@ -38,5 +38,5 @@ Route::get("/showLecturer",[fetchProject::class,"showLecturer"]);
 
 Route::get("/updateProject",[updateProject::class,"displayProject"]);
 Route::get("upd/{id}",[updateProject::class,"showProject"]);
-Route::get("/edit",[updateProject::class,"update"]);
+Route::POST("edit",[updateProject::class,"update"]);
 

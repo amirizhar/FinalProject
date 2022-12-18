@@ -1,290 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+    {{-- @include('lecturer.usercss')
+    @include('lecturer.navbar') --}}
 
-<head>
-    <!-- Required meta tags -->
-    @include('lecturer.usercss')
-</head>
+    <h1>Update Project</h1>
+    
+    <form action="/edit" method="post">
+    @csrf
+    
+    <input type="hidden" name="id" value="{{$disp['id']}}"><br><br>
 
-<body>
-    <div class="container-scroller">
-        @include('lecturer.navbar')
+    {{-- <label>Project Title</label><br> --}}
+    <input type="hidden" name="project_title" value="{{$disp['project_title']}}"><br><br>
 
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row ">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
+    <label>Start Date</label><br>
+    <input type="date" name="start_date" value="{{$disp['start_date']}}"><br><br>
 
-                                        <div class="container">
+    <label>End Date</label><br>
+    <input type="date" name="end_date" value="{{$disp['end_date']}}"><br><br>
 
-                                            <form class="well form-horizontal" action="/edit" method="post">
-                                                @csrf
+    <label>Duration</label><br>
+    <input type="text" name="duration" value="{{$disp['duration']}}"><br><br>
 
-                                                <fieldset>
+    <label>Student Name</label><br>
+    <input type="text" name="student_name" value="{{$disp['student_name']}}"><br><br>
 
-                                                    <div class="float-container">
-                                                        <div class="float-child">
-                                                            <div class="form-group">
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-user"></i></span>
-                                                                        <input type="hidden" name="id"
-                                                                            value="{{$disp['$id']}}" placeholder="id"
-                                                                            class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+    {{-- <label>Project Type</label><br>
+    <input type="text" name="project_type" value="{{$disp['project_type']}}"><br><br> --}}
 
-                                                            <!-- Text input-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Project
-                                                                    Title</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-user"></i></span>
-                                                                        <input name="project_title"
-                                                                            placeholder="Project Title"
-                                                                            class="form-control" type="text"
-                                                                            value="{{$disp['$project_title']}}"
-                                                                            disabled>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+    {{-- <label>Supervisor</label><br> --}}
+    {{-- <input type="hidden" name="supervisor" value="{{$disp['supervisor']}}"><br><br> --}}
 
-                                                            <!-- Text input-->
+    {{-- <label>Examiner 1</label><br>
+    <input type="text" name="examiner_1" value="{{$disp['examiner_1']}}"><br><br> --}}
 
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Start Date</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-user"></i></span>
-                                                                        <input name="start_date" placeholder="Last Name"
-                                                                            class="form-control" type="date"
-                                                                            value="{{ $disp['$start_date'] }}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+    {{-- <label>Examiner 2</label><br>
+    <input type="text" name="examiner_2" value="{{$disp['examiner_2']}}"><br><br>  --}}
 
-                                                            <!-- Text input-->
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">End Date</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-envelope"></i></span>
-                                                                        <input name="end_date" placeholder="End Date"
-                                                                            class="form-control" type="date"
-                                                                            value="{{ $disp['$end_date'] }}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+    <label for="project_progress">Project Progress</label><br>
+    <select name="project_progress">
+    <option value="{{$disp['project_progress']}}">Option</option>
+      <option value="Milestone 1">Milestone 1</option>
+      <option value="Milestone 2">Milestone 2</option>
+      <option value="Final Report">Final Report</option>
+    </select><br>
 
-
-                                                            <!-- Text input-->
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Duration</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-earphone"></i></span>
-                                                                        <input name="duration" placeholder="Duration"
-                                                                            class="form-control" type="text"
-                                                                            value="{{ $disp['$duration'] }}" disabled>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Text input-->
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Student
-                                                                    Name</label>
-                                                                <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-home"></i></span>
-                                                                        <input name="student_name"
-                                                                            placeholder="Student Name"
-                                                                            class="form-control" type="text"
-                                                                            value="{{ $disp['$student_name'] }}">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="float-child">
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Project
-                                                                    Type</label>
-                                                                <div class="col-md-4 selectContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-list"></i></span>
-                                                                        <select disabled name="project_type"
-                                                                            class="form-control selectpicker">
-                                                                            <option value="">Project Type</option>
-                                                                            <option>Development</option>
-                                                                            <option>Research</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div><br>
-
-                                                            <div class="form-group">
-                                                                    <label
-                                                                        class="col-md-4 control-label">Supervisor</label>
-                                                                    <div class="col-md-4 selectContainer">
-                                                                        <div class="input-group">
-                                                                            <span class="input-group-addon"><i
-                                                                                    class="glyphicon glyphicon-list"></i></span>
-                                                                            <select name="supervisor"
-                                                                                class="form-control selectpicker" disabled>
-                                                                                <option value=" ">Project
-                                                                                    Supervisor</option>
-                                                                                <option>Alabama</option>
-                                                                                <option>Alaska</option>
-                                                                                <option>Arizona</option>
-                                                                                <option>Arkansas</option>
-                                                                                <option>California</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div><br>
-
-                                                            <div class="form-group">
-                                                                        <label class="col-md-4 control-label">Examiner
-                                                                            1</label>
-                                                                        <div class="col-md-4 selectContainer">
-                                                                            <div class="input-group">
-                                                                                <span class="input-group-addon"><i
-                                                                                        class="glyphicon glyphicon-list"></i></span>
-                                                                                <select name="examiner_1"
-                                                                                    class="form-control selectpicker">
-                                                                                    <option value=" ">Examiner 1
-                                                                                    </option>
-                                                                                    <option>Alabama</option>
-                                                                                    <option>Alaska</option>
-                                                                                    <option>Arizona</option>
-                                                                                    <option>Arkansas</option>
-                                                                                    <option>California</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div><br>
-
-                                                            <div class="form-group">
-                                                                            <label
-                                                                                class="col-md-4 control-label">Examiner
-                                                                                2</label>
-                                                                            <div class="col-md-4 selectContainer">
-                                                                                <div class="input-group">
-                                                                                    <span class="input-group-addon"><i
-                                                                                            class="glyphicon glyphicon-list"></i></span>
-                                                                                    <select name="examiner_2"
-                                                                                        class="form-control selectpicker">
-                                                                                        <option value="{{ $disp['$examiner_1'] }}" disabled>Select
-                                                                                           </option>
-                                                                                        <option>Alabama</option>
-                                                                                        <option>Alaska</option>
-                                                                                        <option>Arizona</option>
-                                                                                        <option>Arkansas</option>
-                                                                                        <option>California</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Progress
-                                                                </label>
-                                                                <div class="col-md-4 selectContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-list"></i></span>
-                                                                        <select name="examiner_2"
-                                                                            class="form-control selectpicker">
-                                                                            <option
-                                                                                value="{{ $disp['$project_progress'] }}">
-                                                                                Examiner
-                                                                                2</option>
-                                                                            <option>Milestone 1</option>
-                                                                            <option>Milestone 2</option>
-                                                                            <option>Final Report</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div><br>
-
-                                                            <div class="form-group">
-                                                                <label class="col-md-4 control-label">Status
-                                                                </label>
-                                                                <div class="col-md-4 selectContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-list"></i></span>
-                                                                        <select name="examiner_2"
-                                                                            class="form-control selectpicker">
-                                                                            <option
-                                                                                value="{{ $disp['$project_status'] }}">
-                                                                                Examiner
-                                                                                2</option>
-                                                                            <option> On Track </option>
-                                                                            <option>Delayed</option>
-                                                                            <option>Extended</option>
-                                                                            <option>Completed</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-                                                        <!-- Success message -->
-                                                        {{-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> --}}
-
-                                                        <!-- Button -->
-                                                        <div class="form-group">
-                                                            <label class="col-md-4 control-label"></label>
-                                                            <div class="col-md-4">
-                                                                <button type="submit" class="btn btn-warning"> Update
-                                                                    <span
-                                                                        class="glyphicon glyphicon-send"></span></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
-                                    </div><!-- /.container -->
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.html -->
-    @include('lecturer.footer')
-    <!-- partial -->
-    </div>
-    <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-    </div>
-    @include('lecturer.userscript')
-</body>
-
-</html>
+    <label for="project_status">Project Status</label><br>
+    <select name="project_status">
+    <option value="{{$disp['project_status']}}">Option</option>
+      <option value="On track">On Track</option>
+      <option value="Delayed">Delayed</option>
+      <option value="Extended">Extended</option>
+      <option value="Completed">Completed</option>
+    </select><br>
+    
+    <button type="submit">Update</button>
+    <button type="reset">reset</button>
+    
+    </form>
+    {{-- @include('lecturer.footer') --}}
