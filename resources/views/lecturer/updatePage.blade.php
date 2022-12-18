@@ -18,33 +18,30 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Create Project</h4>
                                     <div class="table-responsive">
 
                                         <div class="container">
 
-                                            <form class="well form-horizontal" action="/edit" method="post" id="contact_form">
-                                            @csrf
-                                                
+                                            <form class="well form-horizontal" action="/edit" method="post">
+                                                @csrf
+
                                                 <fieldset>
 
                                                     <div class="float-container">
                                                         <div class="float-child">
-                                                    <div class="form-group">
-                                                        <label class="col-md-4 control-label">Project
-                                                            ID</label>
-                                                        <div class="col-md-4 inputGroupContainer">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i
-                                                                        class="glyphicon glyphicon-user"></i></span>
-                                                                <input type="hidden" name="id" value="{{$disp['$id']}}"
-                                                                    placeholder="id"
-                                                                    class="form-control">
+                                                            <div class="form-group">
+                                                                <div class="col-md-4 inputGroupContainer">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="glyphicon glyphicon-user"></i></span>
+                                                                        <input type="hidden" name="id"
+                                                                            value="{{$disp['$id']}}" placeholder="id"
+                                                                            class="form-control">
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
 
-                                                    <!-- Text input-->
+                                                            <!-- Text input-->
                                                             <div class="form-group">
                                                                 <label class="col-md-4 control-label">Project
                                                                     Title</label>
@@ -54,7 +51,9 @@
                                                                                 class="glyphicon glyphicon-user"></i></span>
                                                                         <input name="project_title"
                                                                             placeholder="Project Title"
-                                                                            class="form-control" type="text" value="{{$disp['$project_title']}}">
+                                                                            class="form-control" type="text"
+                                                                            value="{{$disp['$project_title']}}"
+                                                                            disabled>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -68,7 +67,8 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-user"></i></span>
                                                                         <input name="start_date" placeholder="Last Name"
-                                                                            class="form-control" type="date" value="{{$disp['$start_date']}}">
+                                                                            class="form-control" type="date"
+                                                                            value="{{ $disp['$start_date'] }}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -81,7 +81,8 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-envelope"></i></span>
                                                                         <input name="end_date" placeholder="End Date"
-                                                                            class="form-control" type="date" value="{{$disp['$end_date']}}">
+                                                                            class="form-control" type="date"
+                                                                            value="{{ $disp['$end_date'] }}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -96,7 +97,8 @@
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-earphone"></i></span>
                                                                         <input name="duration" placeholder="Duration"
-                                                                            class="form-control" type="text" value="{{$disp['$duration']}}">
+                                                                            class="form-control" type="text"
+                                                                            value="{{ $disp['$duration'] }}" disabled>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -112,7 +114,8 @@
                                                                                 class="glyphicon glyphicon-home"></i></span>
                                                                         <input name="student_name"
                                                                             placeholder="Student Name"
-                                                                            class="form-control" type="text" value="{{$disp['$student_name']}}">
+                                                                            class="form-control" type="text"
+                                                                            value="{{ $disp['$student_name'] }}">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -126,7 +129,7 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-list"></i></span>
-                                                                        <select name="project_type"
+                                                                        <select disabled name="project_type"
                                                                             class="form-control selectpicker">
                                                                             <option value="">Project Type</option>
                                                                             <option>Development</option>
@@ -135,7 +138,7 @@
                                                                     </div>
                                                                 </div><br>
 
-                                                                <div class="form-group">
+                                                            <div class="form-group">
                                                                     <label
                                                                         class="col-md-4 control-label">Supervisor</label>
                                                                     <div class="col-md-4 selectContainer">
@@ -143,7 +146,7 @@
                                                                             <span class="input-group-addon"><i
                                                                                     class="glyphicon glyphicon-list"></i></span>
                                                                             <select name="supervisor"
-                                                                                class="form-control selectpicker">
+                                                                                class="form-control selectpicker" disabled>
                                                                                 <option value=" ">Project
                                                                                     Supervisor</option>
                                                                                 <option>Alabama</option>
@@ -155,7 +158,7 @@
                                                                         </div>
                                                                     </div><br>
 
-                                                                    <div class="form-group">
+                                                            <div class="form-group">
                                                                         <label class="col-md-4 control-label">Examiner
                                                                             1</label>
                                                                         <div class="col-md-4 selectContainer">
@@ -175,7 +178,7 @@
                                                                             </div>
                                                                         </div><br>
 
-                                                                        <div class="form-group">
+                                                            <div class="form-group">
                                                                             <label
                                                                                 class="col-md-4 control-label">Examiner
                                                                                 2</label>
@@ -185,8 +188,8 @@
                                                                                             class="glyphicon glyphicon-list"></i></span>
                                                                                     <select name="examiner_2"
                                                                                         class="form-control selectpicker">
-                                                                                        <option value=" ">Examiner
-                                                                                            2</option>
+                                                                                        <option value="{{ $disp['$examiner_1'] }}" disabled>Select
+                                                                                           </option>
                                                                                         <option>Alabama</option>
                                                                                         <option>Alaska</option>
                                                                                         <option>Arizona</option>
@@ -196,21 +199,65 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
-                                                                    <!-- Success message -->
-                                                                    {{-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> --}}
-
-                                                                    <!-- Button -->
-                                                                    <div class="form-group">
-                                                                        <label class="col-md-4 control-label"></label>
-                                                                        <div class="col-md-4">
-                                                                            <button type="submit"
-                                                                                class="btn btn-warning">Create <span
-                                                                                    class="glyphicon glyphicon-send"></span></button>
-                                                                        </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label">Progress
+                                                                </label>
+                                                                <div class="col-md-4 selectContainer">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="glyphicon glyphicon-list"></i></span>
+                                                                        <select name="examiner_2"
+                                                                            class="form-control selectpicker">
+                                                                            <option
+                                                                                value="{{ $disp['$project_progress'] }}">
+                                                                                Examiner
+                                                                                2</option>
+                                                                            <option>Milestone 1</option>
+                                                                            <option>Milestone 2</option>
+                                                                            <option>Final Report</option>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
+                                                            </div><br>
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-4 control-label">Status
+                                                                </label>
+                                                                <div class="col-md-4 selectContainer">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="glyphicon glyphicon-list"></i></span>
+                                                                        <select name="examiner_2"
+                                                                            class="form-control selectpicker">
+                                                                            <option
+                                                                                value="{{ $disp['$project_status'] }}">
+                                                                                Examiner
+                                                                                2</option>
+                                                                            <option> On Track </option>
+                                                                            <option>Delayed</option>
+                                                                            <option>Extended</option>
+                                                                            <option>Completed</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <!-- Success message -->
+                                                        {{-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> --}}
+
+                                                        <!-- Button -->
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label"></label>
+                                                            <div class="col-md-4">
+                                                                <button type="submit" class="btn btn-warning"> Update
+                                                                    <span
+                                                                        class="glyphicon glyphicon-send"></span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </fieldset>
                                             </form>
                                         </div>

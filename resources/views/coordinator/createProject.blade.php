@@ -52,13 +52,27 @@
                                                             <div class="form-group">
                                                                 <label class="col-md-4 control-label">Duration</label>
                                                                 <div class="col-md-4 inputGroupContainer">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon"><i
-                                                                                class="glyphicon glyphicon-earphone"></i></span>
-                                                                        <input style='color:black; background-color:azure' name="duration" placeholder="Duration"
-                                                                            class="form-control" type="text">
+                                                                        <div class="input-group">
+                                                                            <span class="input-group-addon"><i
+                                                                                    class="glyphicon glyphicon-list"></i></span>
+                                                                            <select style='color:black; background-color:azure' name="duration"
+                                                                                class="form-control selectpicker">
+                                                                                <option value="">Select</option>
+                                                                                <option>1 Months</option>
+                                                                                <option>2 Months</option>
+                                                                                <option>3 Months</option>
+                                                                                <option>4 Months</option>
+                                                                                <option>5 Months</option>
+                                                                                <option>6 Months</option>
+                                                                                <option>7 Months</option>
+                                                                                <option>8 Months</option>
+                                                                                <option>9 Months</option>
+                                                                                <option>10 Months</option>
+                                                                                <option>11 Months</option>
+                                                                                <option>12 Months</option>
+                                                                            </select>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
                                                             </div>
 
                                                             <!-- Text input-->
