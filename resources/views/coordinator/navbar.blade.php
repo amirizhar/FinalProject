@@ -27,15 +27,18 @@
                 <span class="menu-title">Create New Project</span>
             </a>
         </li>
+        {{-- href="{{ route('register') }}" --}}
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ route('register') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
                 </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">Register Lecturer</span>
             </a>
         </li>
     </ul>
+
+
 
     <nav class="navbar p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">

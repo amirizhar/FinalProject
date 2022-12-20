@@ -27,6 +27,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get("/RegisterLecturer",[homeControl::class,"register"]);
 Route::get("/",[homeControl::class,"index"]);
 Route::get("/redirect",[homeControl::class,"redirectFunct"]);
 

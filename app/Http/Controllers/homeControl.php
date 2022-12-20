@@ -11,6 +11,10 @@ class homeControl extends Controller
         return view('home');
     }
 
+    function register(){
+        return view('auth.register');
+    }
+
     function redirectFunct()
     {
         $typeuser=Auth::user()->usertype;

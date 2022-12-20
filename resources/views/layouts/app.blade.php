@@ -19,7 +19,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="mb-0 d-none d-sm-block navbar-profile-name">
+        <div class="">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
