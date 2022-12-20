@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class updateProject extends Controller
 {
@@ -12,6 +13,9 @@ class updateProject extends Controller
     {
         $output = Project::all();
         return view('lecturer.updateProject',['senarai'=>$output]);
+
+        // $output = Project::select('select * from projects where supervisor = Saiful');
+        // return view('lecturer.updateProject',['senarai'=>$output]);
     }
 
     function showProject($id)

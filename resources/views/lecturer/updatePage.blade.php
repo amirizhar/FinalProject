@@ -5,7 +5,7 @@
     
     <form action="/edit" method="post">
     @csrf
-    
+  
     <input type="hidden" name="id" value="{{$disp['id']}}"><br><br>
 
     {{-- <label>Project Title</label><br> --}}

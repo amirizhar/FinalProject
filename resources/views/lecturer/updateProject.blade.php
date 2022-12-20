@@ -63,8 +63,14 @@
                                                         {{-- <td> {{ $x['supervisor'] }}</td> --}}
                                                         <td> {{ $x['examiner_1'] }}</td>
                                                         <td> {{ $x['examiner_2'] }}</td>
-                                                        <td style="font-weight:bold;"><a
-                                                                href={{ 'upd/' . $x['id'] }}>Update</a></td>
+                                                        
+                                                        @if ($x['supervisor'] == 'Saiful')
+                                                            <td style="font-weight:bold;"><a
+                                                                    href={{ 'upd/' . $x['id'] }}>Update</a></td>
+                                                        @else
+                                                            
+                                                        @endif
+
                                                     </tr>
                                             @endforeach
 
