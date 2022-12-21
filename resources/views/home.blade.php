@@ -35,7 +35,7 @@
                     <div class="col-lg-4">
                         <div class="left-content">
                             <div class="inner-content">
-                                <h4>Collage of Computing and Informatic</h4>
+                                <h4>College of Computing and Informatic</h4>
                                 <h6>FYP Management System</h6>
                             </div>
                         </div>
