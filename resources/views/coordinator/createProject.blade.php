@@ -44,7 +44,7 @@
                                                                             style='color:black; background-color:azure'
                                                                             name="project_title"
                                                                             placeholder="Project Title"
-                                                                            class="form-control" type="text">
+                                                                            class="form-control" type="text" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -93,7 +93,7 @@
                                                                             style='color:black; background-color:azure'
                                                                             name="student_name"
                                                                             placeholder="Student Name"
-                                                                            class="form-control" type="text">
+                                                                            class="form-control" type="text" required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -110,7 +110,7 @@
                                                                         <select
                                                                             style='color:black; background-color:azure'
                                                                             name="project_type"
-                                                                            class="form-control selectpicker">
+                                                                            class="form-control selectpicker" required>
                                                                             <option value="">Select</option>
                                                                             <option>Development</option>
                                                                             <option>Research</option>

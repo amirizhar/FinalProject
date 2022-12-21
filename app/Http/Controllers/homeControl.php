@@ -17,24 +17,18 @@ class homeControl extends Controller
     }
 
 
-
-
     function addLecturer(Request $req)
     {
-        $member = new User;
 
+        $member = new User;
         $member->name = $req->name;
         $member->email = $req->email;
-        $member->password = $req->password;
+        $member->password = $req->password = bcrypt('secret');
 
         $member->save();
 
-
-
         return redirect('/showCoordinator');
     }
-
-
 
 
     function redirectFunct()

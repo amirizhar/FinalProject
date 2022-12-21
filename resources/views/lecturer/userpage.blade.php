@@ -33,19 +33,14 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">List of Project</h4>
+                                    <h4 class="card-title">List of Project Under Your Supervision</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
+                                                <?php
+                                                $name = Auth::user()->name;
+                                                ?>
                                                 <tr>
-
-
-                                                    <?php
-                                                    $Session = Session::get('name');
-                                                    ?>
-                                                    <?php
-                                                    echo "$Session";
-                                                    ?>
                                                     {{-- <th> id </th> --}}
                                                     <th> Title </th>
                                                     <th> Start Date </th>
@@ -60,6 +55,7 @@
                                             </thead>
                                             @foreach ($senarai as $x)
                                                 <tbody>
+                                                    @if ($name == $x['supervisor'] )
                                                     <tr>
                                                         {{-- <td> {{ $x['id'] }}</td> --}}
                                                         <td> {{ $x['project_title'] }}</td>
@@ -72,6 +68,8 @@
                                                         <td> {{ $x['examiner_1'] }}</td>
                                                         <td> {{ $x['examiner_2'] }}</td>
                                                     </tr>
+                                                    @else
+                                                    @endif
                                             @endforeach
 
                                             </tbody>
@@ -91,6 +89,9 @@
                                     <h4 class="card-title">Project Examiner</h4>
                                     <div class="table-responsive">
                                         <table class="table">
+                                            <?php
+                                            $name = Auth::user()->name;
+                                            ?>
                                             <thead>
                                                 <tr>
                                                     {{-- <th> id </th> --}}
@@ -107,6 +108,7 @@
                                             </thead>
                                             @foreach ($senarai as $x)
                                                 <tbody>
+                                                    @if ( $name == $x['examiner_2'] || $name == $x['examiner_1'])
                                                     <tr>
                                                         {{-- <td> {{ $x['id'] }}</td> --}}
                                                         <td> {{ $x['project_title'] }}</td>
@@ -119,6 +121,8 @@
                                                         <td> {{ $x['examiner_1'] }}</td>
                                                         <td> {{ $x['examiner_2'] }}</td>
                                                     </tr>
+                                                    @else
+                                                    @endif
                                             @endforeach
 
                                             </tbody>

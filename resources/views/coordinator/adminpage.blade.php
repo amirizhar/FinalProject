@@ -5,6 +5,7 @@
         <!-- Required meta tags -->
         @include('coordinator.admincss')
     </head>
+    {{-- <x-admin-header/> --}}
 
     <body>
         <div class="container-scroller">

@@ -28,17 +28,25 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get("/RegisterLecturer",[homeControl::class,"register"]);
-Route::POST("/addLecturer",[homeControl::class,"addLecturer"]);
-Route::get("/",[homeControl::class,"index"]);
-Route::get("/redirect",[homeControl::class,"redirectFunct"]);
-Route::get("/addProject",[createProject::class,"index"]);
-Route::POST("/createProject",[createProject::class,"addProject"]);
-Route::get("/showCoordinator",[fetchProject::class,"showCoordinator"]);
-Route::get("/showLecturer",[fetchProject::class,"showLecturer"]);
-Route::get("/updateProject",[updateProject::class,"displayProject"]);
-Route::get("upd/{id}",[updateProject::class,"showProject"]);
-Route::POST("edit",[updateProject::class,"update"]);
-Route::get("/deleteLecturer",[fetchUser::class,"displayDeleteLecturer"]);
-Route::get("del/{id}",[fetchUser::class,"deleteLecturer"]);
+// ----------------------homeControl--------------------------
+Route::get("/RegisterLecturer", [homeControl::class, "register"]);
+Route::POST("/addLecturer", [homeControl::class, "addLecturer"]);
+Route::get("/", [homeControl::class, "index"]);
+Route::get("/redirect", [homeControl::class, "redirectFunct"]);
 
+// ----------------------createProject--------------------------
+Route::get("/addProject", [createProject::class, "index"]);
+Route::POST("/createProject", [createProject::class, "addProject"]);
+
+// ----------------------fetchProject--------------------------
+Route::get("/showCoordinator", [fetchProject::class, "showCoordinator"]);
+Route::get("/showLecturer", [fetchProject::class, "showLecturer"]);
+
+// ----------------------updateProject--------------------------
+Route::get("/updateProject", [updateProject::class, "displayProject"]);
+Route::get("upd/{id}", [updateProject::class, "showProject"]);
+Route::POST("edit", [updateProject::class, "update"]);
+
+// ----------------------homeControl--------------------------
+Route::get("/deleteLecturer", [fetchUser::class, "displayDeleteLecturer"]);
+Route::get("del/{id}", [fetchUser::class, "deleteLecturer"]);

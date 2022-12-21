@@ -37,6 +37,7 @@ class fetchProject extends Controller
 
     function showLecturer()
     {
+
         $output=Project::all();
         return view('lecturer.userpage',['senarai'=>$output]);
 

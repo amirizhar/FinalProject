@@ -6,7 +6,10 @@
     <!-- Required meta tags -->
     @include('lecturer.usercss')
 </head>
-
+<?php
+$name = Auth::user()->name;
+print_r($name);
+?>
 <body>
     <div class="container-scroller">
         <div class="row p-0 m-0 proBanner" id="proBanner">
@@ -36,12 +39,15 @@
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
+                                                <?php
+                                                $name = Auth::user()->name;
+                                                ?>
                                                 <tr>
                                                     {{-- <th> id </th> --}}
                                                     <th> Title </th>
                                                     <th> Start Date </th>
                                                     <th> End Date </th>
-                                                    <th> Duration </th>
+                                                    {{-- <th> Duration </th> --}}
                                                     <th> Student </th>
                                                     <th> Type </th>
                                                     {{-- <th> Supervisor </th> --}}
@@ -52,26 +58,23 @@
                                             </thead>
                                             @foreach ($senarai as $x)
                                                 <tbody>
+                                                    @if ($name == $x['supervisor'] )
                                                     <tr>
                                                         {{-- <td> {{ $x['id'] }}</td> --}}
                                                         <td> {{ $x['project_title'] }}</td>
                                                         <td> {{ $x['start_date'] }}</td>
                                                         <td> {{ $x['end_date'] }}</td>
-                                                        <td> {{ $x['duration'] }}</td>
+                                                        {{-- <td> {{ $x['duration'] }}</td> --}}
                                                         <td> {{ $x['student_name'] }}</td>
                                                         <td> {{ $x['project_type'] }}</td>
                                                         {{-- <td> {{ $x['supervisor'] }}</td> --}}
                                                         <td> {{ $x['examiner_1'] }}</td>
                                                         <td> {{ $x['examiner_2'] }}</td>
-                                                        
-                                                        @if ($x['supervisor'] == 'Saiful')
-                                                            <td style="font-weight:bold;"><a
+                                                        <td style="font-weight:bold;"><a
                                                                     href={{ 'upd/' . $x['id'] }}>Update</a></td>
-                                                        @else
-                                                            
-                                                        @endif
-
                                                     </tr>
+                                                    @else
+                                                    @endif
                                             @endforeach
 
                                             </tbody>

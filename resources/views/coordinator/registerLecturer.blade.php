@@ -30,7 +30,7 @@
                                                     </x-slot>
                                             
                                                     <x-jet-validation-errors class="mb-4" />
-                                            
+
                                                     <form method="POST" action="/addLecturer">
                                                         @csrf
                                             
@@ -49,12 +49,12 @@
                                                             <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
                                                         </div>
                                             
-                                                        <div class="mt-4">
+                                                        {{-- <div class="mt-4">
                                                             <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                                                             <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-                                                        </div>
+                                                        </div> --}}
                                             
-                                                        @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+                                                        {{-- @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                                                             <div class="mt-4">
                                                                 <x-jet-label for="terms">
                                                                     <div class="flex items-center">
@@ -69,7 +69,7 @@
                                                                     </div>
                                                                 </x-jet-label>
                                                             </div>
-                                                        @endif
+                                                        @endif --}}
                                             
                                                         <div class="flex items-center justify-end mt-4">
                                             
