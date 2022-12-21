@@ -5,12 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Project;
+use App\Models\User;
 
 class createProject extends Controller
 {
     function index()
     {
-        return view('coordinator.createProject');
+        $output=User::all();
+        return view('coordinator.createProject', ['senarai'=>$output]);
+
+        // $output = User::select('users')->where('usertype', '=', 0)->get();
+        // return view('coordinator.createProject', ['senarai'=>$output]);
+        // $output=User::select("select * from users where 'usertype' = '0' ");
+
+        // return view('coordinator.createProject');
+
+        // $output= User::table('users')
+        //             ->where('usertype', '==', 0)
+        //             ->get();
     }
 
     function addProject(Request $req)

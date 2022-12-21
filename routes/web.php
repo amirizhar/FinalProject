@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\createProject;
 use App\Http\Controllers\fetchProject;
+use App\Http\Controllers\fetchUser;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeControl;
 use App\Http\Controllers\updateProject;
@@ -28,16 +29,16 @@ Route::middleware([
 });
 
 Route::get("/RegisterLecturer",[homeControl::class,"register"]);
+Route::POST("/addLecturer",[homeControl::class,"addLecturer"]);
 Route::get("/",[homeControl::class,"index"]);
 Route::get("/redirect",[homeControl::class,"redirectFunct"]);
-
 Route::get("/addProject",[createProject::class,"index"]);
 Route::POST("/createProject",[createProject::class,"addProject"]);
-
 Route::get("/showCoordinator",[fetchProject::class,"showCoordinator"]);
 Route::get("/showLecturer",[fetchProject::class,"showLecturer"]);
-
 Route::get("/updateProject",[updateProject::class,"displayProject"]);
 Route::get("upd/{id}",[updateProject::class,"showProject"]);
 Route::POST("edit",[updateProject::class,"update"]);
+Route::get("/deleteLecturer",[fetchUser::class,"displayDeleteLecturer"]);
+Route::get("del/{id}",[fetchUser::class,"deleteLecturer"]);
 

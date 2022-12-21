@@ -23,15 +23,16 @@
 
                                         <div class="container">
 
-                                            <form class="well form-horizontal" action="/createProject" method="post" id="contact_form">
-                                            @csrf
-                                                
+                                            <form class="well form-horizontal" action="/createProject" method="post"
+                                                id="contact_form">
+                                                @csrf
+
                                                 <fieldset>
 
                                                     <div class="float-container">
                                                         <div class="float-child">
 
-                                                    <!-- Text input-->
+                                                            <!-- Text input-->
                                                             <div class="form-group">
                                                                 <label class="col-md-4 control-label">Project
                                                                     Title</label>
@@ -39,7 +40,9 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-user"></i></span>
-                                                                        <input style='color:black; background-color:azure' name="project_title"
+                                                                        <input
+                                                                            style='color:black; background-color:azure'
+                                                                            name="project_title"
                                                                             placeholder="Project Title"
                                                                             class="form-control" type="text">
                                                                     </div>
@@ -49,31 +52,33 @@
 
                                                             <!-- Text input-->
 
-                                                            <div class="form-group">
+                                                            {{-- <div class="form-group">
                                                                 <label class="col-md-4 control-label">Duration</label>
                                                                 <div class="col-md-4 inputGroupContainer">
-                                                                        <div class="input-group">
-                                                                            <span class="input-group-addon"><i
-                                                                                    class="glyphicon glyphicon-list"></i></span>
-                                                                            <select style='color:black; background-color:azure' name="duration"
-                                                                                class="form-control selectpicker">
-                                                                                <option value="">Select</option>
-                                                                                <option>1 Months</option>
-                                                                                <option>2 Months</option>
-                                                                                <option>3 Months</option>
-                                                                                <option>4 Months</option>
-                                                                                <option>5 Months</option>
-                                                                                <option>6 Months</option>
-                                                                                <option>7 Months</option>
-                                                                                <option>8 Months</option>
-                                                                                <option>9 Months</option>
-                                                                                <option>10 Months</option>
-                                                                                <option>11 Months</option>
-                                                                                <option>12 Months</option>
-                                                                            </select>
-                                                                        </div>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon"><i
+                                                                                class="glyphicon glyphicon-list"></i></span>
+                                                                        <select
+                                                                            style='color:black; background-color:azure'
+                                                                            name="duration"
+                                                                            class="form-control selectpicker">
+                                                                            <option value="">Select</option>
+                                                                            <option>1 Months</option>
+                                                                            <option>2 Months</option>
+                                                                            <option>3 Months</option>
+                                                                            <option>4 Months</option>
+                                                                            <option>5 Months</option>
+                                                                            <option>6 Months</option>
+                                                                            <option>7 Months</option>
+                                                                            <option>8 Months</option>
+                                                                            <option>9 Months</option>
+                                                                            <option>10 Months</option>
+                                                                            <option>11 Months</option>
+                                                                            <option>12 Months</option>
+                                                                        </select>
                                                                     </div>
-                                                            </div>
+                                                                </div>
+                                                            </div> --}}
 
                                                             <!-- Text input-->
 
@@ -84,7 +89,9 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-home"></i></span>
-                                                                        <input style='color:black; background-color:azure' name="student_name"
+                                                                        <input
+                                                                            style='color:black; background-color:azure'
+                                                                            name="student_name"
                                                                             placeholder="Student Name"
                                                                             class="form-control" type="text">
                                                                     </div>
@@ -100,7 +107,9 @@
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon"><i
                                                                                 class="glyphicon glyphicon-list"></i></span>
-                                                                        <select style='color:black; background-color:azure' name="project_type"
+                                                                        <select
+                                                                            style='color:black; background-color:azure'
+                                                                            name="project_type"
                                                                             class="form-control selectpicker">
                                                                             <option value="">Select</option>
                                                                             <option>Development</option>
@@ -116,14 +125,17 @@
                                                                         <div class="input-group">
                                                                             <span class="input-group-addon"><i
                                                                                     class="glyphicon glyphicon-list"></i></span>
-                                                                            <select style='color:black; background-color:azure' name="supervisor"
+
+                                                                            <select
+                                                                                style='color:black; background-color:azure'
+                                                                                name="supervisor"
                                                                                 class="form-control selectpicker">
+
                                                                                 <option value=" ">Select</option>
-                                                                                <option>Alabama</option>
-                                                                                <option>Alaska</option>
-                                                                                <option>Arizona</option>
-                                                                                <option>Arkansas</option>
-                                                                                <option>California</option>
+                                                                                <@foreach ($senarai as $x)
+                                                                                    <option>{{ $x['name'] }}</option>
+                                                                                    @endforeach
+
                                                                             </select>
                                                                         </div>
                                                                     </div><br>
@@ -135,15 +147,16 @@
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon"><i
                                                                                         class="glyphicon glyphicon-list"></i></span>
-                                                                                <select style='color:black; background-color:azure' name="examiner_1"
+                                                                                <select
+                                                                                    style='color:black; background-color:azure'
+                                                                                    name="examiner_1"
                                                                                     class="form-control selectpicker">
                                                                                     <option value=" ">Select
                                                                                     </option>
-                                                                                    <option>Alabama</option>
-                                                                                    <option>Alaska</option>
-                                                                                    <option>Arizona</option>
-                                                                                    <option>Arkansas</option>
-                                                                                    <option>California</option>
+                                                                                    <@foreach ($senarai as $x)
+                                                                                        <option>{{ $x['name'] }}
+                                                                                        </option>
+                                                                                        @endforeach
                                                                                 </select>
                                                                             </div>
                                                                         </div><br>
@@ -156,15 +169,16 @@
                                                                                 <div class="input-group">
                                                                                     <span class="input-group-addon"><i
                                                                                             class="glyphicon glyphicon-list"></i></span>
-                                                                                    <select style='color:black; background-color:azure' name="examiner_2"
+                                                                                    <select
+                                                                                        style='color:black; background-color:azure'
+                                                                                        name="examiner_2"
                                                                                         class="form-control selectpicker">
                                                                                         <option value=" ">Select
+                                                                                        </option>
+                                                                                        <@foreach ($senarai as $x)
+                                                                                            <option>{{ $x['name'] }}
                                                                                             </option>
-                                                                                        <option>Alabama</option>
-                                                                                        <option>Alaska</option>
-                                                                                        <option>Arizona</option>
-                                                                                        <option>Arkansas</option>
-                                                                                        <option>California</option>
+                                                                                            @endforeach
                                                                                     </select>
                                                                                 </div>
                                                                             </div>

@@ -31,14 +31,6 @@
           <span class="menu-title">Update Project</span>
         </a>
       </li>
-      <li class="nav-item menu-items">
-        <a class="nav-link" href="">
-          <span class="menu-icon">
-            <i class="mdi mdi-table-large"></i>
-          </span>
-          <span class="menu-title">Tables</span>
-        </a>
-      </li>
     </ul>
   
     <nav class="navbar p-0 fixed-top d-flex flex-row">

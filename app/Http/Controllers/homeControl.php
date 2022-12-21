@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class homeControl extends Controller
 {
@@ -12,8 +13,29 @@ class homeControl extends Controller
     }
 
     function register(){
-        return view('auth.register');
+        return view('coordinator.registerLecturer');
     }
+
+
+
+
+    function addLecturer(Request $req)
+    {
+        $member = new User;
+
+        $member->name = $req->name;
+        $member->email = $req->email;
+        $member->password = $req->password;
+
+        $member->save();
+
+
+
+        return redirect('/showCoordinator');
+    }
+
+
+
 
     function redirectFunct()
     {

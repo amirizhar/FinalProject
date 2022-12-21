@@ -2,8 +2,8 @@
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="/redirect"><img style="height:65px;" src="assets/images/logo-uniten.png"
                 alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="redirect"><img src="assets/images/logo-uniten.png"
-                alt="logo" /></a>
+        {{-- <a class="sidebar-brand brand-logo-mini" href="redirect"><img src="assets/images/logo-uniten.png"
+                alt="logo" /></a> --}}
     </div>
     <ul class="nav">
         <li class="nav-item profile">
@@ -29,13 +29,22 @@
         </li>
         {{-- href="{{ route('register') }}" --}}
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('register') }}">
+            <a class="nav-link" href="/RegisterLecturer">
                 <span class="menu-icon">
                     <i class="mdi mdi-table-large"></i>
                 </span>
                 <span class="menu-title">Register Lecturer</span>
             </a>
         </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/deleteLecturer">
+                <span class="menu-icon">
+                    <i class="mdi mdi-table-large"></i>
+                </span>
+                <span class="menu-title">Delete Lecturer</span>
+            </a>
+        </li>
+        
     </ul>
 
 
