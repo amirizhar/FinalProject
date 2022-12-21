@@ -15,7 +15,7 @@ class fetchUser extends Controller
 
     function displayDeleteLecturer()
     {
-        $output = User::all();
+        $output = User::paginate(5);
         return view('coordinator.deleteLecturer',['list'=>$output]);
     }
 

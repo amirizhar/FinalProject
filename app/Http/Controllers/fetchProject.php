@@ -13,7 +13,7 @@ class fetchProject extends Controller
 {
     function showCoordinator()
     {
-        $output=Project::all();
+        $output=Project::paginate(5);
         return view('coordinator.adminpage',['senarai'=>$output]);
     }
 
@@ -22,7 +22,8 @@ class fetchProject extends Controller
     {
 
         $output=Project::all();
-        return view('lecturer.userpage',['senarai'=>$output]);
+        return view('lecturer.userpage',['lecturer'=>$output]);
 
     }
+
 }

@@ -40,7 +40,10 @@
                                             @endforeach
 
                                             </tbody>
-                                        </table>
+                                        </table><br><br>
+                                        <span>
+                                            {{ $list->links() }}
+                                        </span>
                                     </div>
                                 </div>
                             </div>

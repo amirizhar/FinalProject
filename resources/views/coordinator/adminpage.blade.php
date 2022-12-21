@@ -4,8 +4,8 @@
     <head>
         <!-- Required meta tags -->
         @include('coordinator.admincss')
+        <title> Coordinator</title>
     </head>
-    {{-- <x-admin-header/> --}}
 
     <body>
         <div class="container-scroller">
@@ -57,7 +57,10 @@
                                                 @endforeach
 
                                                 </tbody>
-                                            </table>
+                                            </table><br><br>
+                                            <span>
+                                                {{ $senarai->links() }}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

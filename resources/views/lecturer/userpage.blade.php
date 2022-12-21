@@ -33,7 +33,7 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">List of Project Under Your Supervision</h4>
+                                    <h4 class="card-title">Project Under Your Supervision</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -53,7 +53,7 @@
                                                     <th> Status </th>
                                                 </tr>
                                             </thead>
-                                            @foreach ($senarai as $x)
+                                            @foreach ($lecturer as $x)
                                                 <tbody>
                                                     @if ($name == $x['supervisor'])
                                                         <tr>
@@ -87,15 +87,15 @@
                                             @endforeach
 
                                             </tbody>
-                                        </table>
+                                        </table><br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                {{-- </div>
 
-                <div class="content-wrapper">
+                <div class="content-wrapper"> --}}
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
@@ -120,7 +120,7 @@
                                                     <th> Status </th>
                                                 </tr>
                                             </thead>
-                                            @foreach ($senarai as $x)
+                                            @foreach ($lecturer as $x)
                                                 <tbody>
                                                     @if ($name == $x['examiner_2'] || $name == $x['examiner_1'])
                                                         <tr>
@@ -154,7 +154,8 @@
                                             @endforeach
 
                                             </tbody>
-                                        </table>
+                                        </table><br><br>
+
                                     </div>
                                 </div>
                             </div>
