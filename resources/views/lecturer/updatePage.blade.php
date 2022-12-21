@@ -57,27 +57,27 @@
 
     <body>
     <center>
-        <h1>Update Project</h1>
+        {{-- <h1>Update Project</h1>
 
         <form action="/edit" method="post">
-            @csrf
+            @csrf --}}
 
-            <input type="hidden" name="id" value="{{ $disp['id'] }}"><br><br>
+            {{-- <input type="hidden" name="id" value="{{ $disp['id'] }}"><br><br> --}}
 
             {{-- <label>Project Title</label><br> --}}
-            <input type="hidden" name="project_title" value="{{ $disp['project_title'] }}"><br><br>
+            {{-- <input type="hidden" name="project_title" value="{{ $disp['project_title'] }}"><br><br> --}}
 
-            <label>Start Date</label><br>
-            <input type="date" name="start_date" value="{{ $disp['start_date'] }}"><br><br>
+            {{-- <label>Start Date</label><br> --}}
+            {{-- <input type="date" name="start_date" value="{{ $disp['start_date'] }}"><br><br> --}}
 
-            <label>End Date</label><br>
-            <input type="date" name="end_date" value="{{ $disp['end_date'] }}"><br><br>
+            {{-- <label>End Date</label><br>
+            <input type="date" name="end_date" value="{{ $disp['end_date'] }}"><br><br> --}}
 
             {{-- <label>Duration</label><br>
             <input type="text" name="duration" value="{{ $disp['duration'] }}"><br><br> --}}
 
-            <label>Student Name</label><br>
-            <input type="text" name="student_name" value="{{ $disp['student_name'] }}"><br><br>
+            {{-- <label>Student Name</label><br>
+            <input type="text" name="student_name" value="{{ $disp['student_name'] }}"><br><br> --}}
 
             {{-- <label>Project Type</label><br>
     <input type="text" name="project_type" value="{{$disp['project_type']}}"><br><br> --}}
@@ -91,31 +91,28 @@
             {{-- <label>Examiner 2</label><br>
     <input type="text" name="examiner_2" value="{{$disp['examiner_2']}}"><br><br>  --}}
 
-            <label for="project_progress">Project Progress</label><br>
+            {{-- <label for="project_progress">Project Progress</label><br>
             <select name="project_progress">
                 <option value="{{ $disp['project_progress'] }}">Option</option>
                 <option value="Milestone 1">Milestone 1</option>
                 <option value="Milestone 2">Milestone 2</option>
                 <option value="Final Report">Final Report</option>
-            </select><br>
+            </select><br> --}}
 
-            <label for="project_status">Project Status</label><br>
+            {{-- <label for="project_status">Project Status</label><br>
             <select name="project_status">
                 <option value="{{ $disp['project_status'] }}">Option</option>
                 <option value="On track">On Track</option>
                 <option value="Delayed">Delayed</option>
                 <option value="Extended">Extended</option>
                 <option value="Completed">Completed</option>
-            </select><br>
+            </select><br> --}}
 
-            <button type="submit">Update</button>
-            <button type="reset">reset</button>
+            {{-- <button type="submit">Update</button>
+            <button type="reset">reset</button> --}}
 
         </form>
     </center>
-
-    @include('lecturer.userscript')
-    @include('lecturer.footer')
     </body>
 
 
@@ -129,4 +126,91 @@
 
 
 
-  
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 50%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+    </head>
+    <center>
+    <body>
+
+      @include('lecturer.navbar')
+    
+    <h3>Update Project</h3>
+    
+    <div class="container">
+      <form action="/edit" method="POST">
+        @csrf
+
+        <input type="hidden" id="fname" value="{{ $disp['id'] }}" name="id" >
+
+        <label for="project_title">Project Title</label><br>
+        <input type="text" id="project_title" name="project_title" value="{{ $disp['project_title'] }}" placeholder="Project Title" disabled><br>
+
+        <label for="start_date">Start Date</label><br>
+        <input type="date" id="start_date" name="start_date" value="{{ $disp['start_date'] }}"><br><br>
+
+        <label for="end_date">End Date</label><br>
+        <input type="date" id="end_date" name="end_date" value="{{ $disp['end_date'] }}"><br>
+    
+        <label for="project_progress">Project Progress</label><br>
+        <select name="project_progress">
+            <option value="{{ $disp['project_progress'] }}">Option</option>
+            <option value="Milestone 1">Milestone 1</option>
+            <option value="Milestone 2">Milestone 2</option>
+            <option value="Final Report">Final Report</option>
+        </select><br>
+
+        <label value="{{ $disp['project_status'] }}" for="project_status">Project Status</label><br>
+        <select name="project_status">
+            <option value="{{ $disp['project_status'] }}">Option</option>
+            <option value="On track">On Track</option>
+            <option value="Delayed">Delayed</option>
+            <option value="Extended">Extended</option>
+            <option value="Completed">Completed</option>
+        </select><br>
+    
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    @include('lecturer.userscript')
+    @include('lecturer.footer')
+    </body>
+    </center>
+    </html>
+    

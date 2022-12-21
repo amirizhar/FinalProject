@@ -48,26 +48,40 @@
                                                     <th> Duration </th>
                                                     <th> Student </th>
                                                     <th> Type </th>
-                                                    <th> Supervisor </th>
-                                                    <th> Examiner 1 </th>
-                                                    <th> Examiner 2 </th>
+                                                    {{-- <th> Supervisor </th> --}}
+                                                    <th> Progress </th>
+                                                    <th> Status </th>
                                                 </tr>
                                             </thead>
                                             @foreach ($senarai as $x)
                                                 <tbody>
-                                                    @if ($name == $x['supervisor'] )
-                                                    <tr>
-                                                        {{-- <td> {{ $x['id'] }}</td> --}}
-                                                        <td> {{ $x['project_title'] }}</td>
-                                                        <td> {{ $x['start_date'] }}</td>
-                                                        <td> {{ $x['end_date'] }}</td>
-                                                        <td> {{ $x['duration'] }}</td>
-                                                        <td> {{ $x['student_name'] }}</td>
-                                                        <td> {{ $x['project_type'] }}</td>
-                                                        <td> {{ $x['supervisor'] }}</td>
-                                                        <td> {{ $x['examiner_1'] }}</td>
-                                                        <td> {{ $x['examiner_2'] }}</td>
-                                                    </tr>
+                                                    @if ($name == $x['supervisor'])
+                                                        <tr>
+                                                            {{-- <td> {{ $x['id'] }}</td> --}}
+                                                            <td> {{ $x['project_title'] }}</td>
+                                                            <td> {{ $x['start_date'] }}</td>
+                                                            <td> {{ $x['end_date'] }}</td>
+                                                            <td>
+                                                            <?php
+                                                            $sdate = $x['start_date'];
+                                                            $edate = $x['end_date'];
+                                                            
+                                                            $date_diff = abs(strtotime($edate) - strtotime($sdate));
+                                                            
+                                                            $years = floor($date_diff / (365 * 60 * 60 * 24));
+                                                            $months = floor(($date_diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
+                                                            $days = floor(($date_diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));
+                                                            
+                                                            printf(' %d month',  $months);
+                                                            printf("\n");
+                                                            ?>
+                                                            </td>
+                                                            <td> {{ $x['student_name'] }}</td>
+                                                            <td> {{ $x['project_type'] }}</td>
+                                                            {{-- <td> {{ $x['supervisor'] }}</td> --}}
+                                                            <td> {{ $x['project_progress'] }}</td>
+                                                            <td> {{ $x['project_status'] }}</td>
+                                                        </tr>
                                                     @else
                                                     @endif
                                             @endforeach
@@ -102,25 +116,39 @@
                                                     <th> Student </th>
                                                     <th> Type </th>
                                                     <th> Supervisor </th>
-                                                    <th> Examiner 1 </th>
-                                                    <th> Examiner 2 </th>
+                                                    <th> Progress </th>
+                                                    <th> Status </th>
                                                 </tr>
                                             </thead>
                                             @foreach ($senarai as $x)
                                                 <tbody>
-                                                    @if ( $name == $x['examiner_2'] || $name == $x['examiner_1'])
-                                                    <tr>
-                                                        {{-- <td> {{ $x['id'] }}</td> --}}
-                                                        <td> {{ $x['project_title'] }}</td>
-                                                        <td> {{ $x['start_date'] }}</td>
-                                                        <td> {{ $x['end_date'] }}</td>
-                                                        <td> {{ $x['duration'] }}</td>
-                                                        <td> {{ $x['student_name'] }}</td>
-                                                        <td> {{ $x['project_type'] }}</td>
-                                                        <td> {{ $x['supervisor'] }}</td>
-                                                        <td> {{ $x['examiner_1'] }}</td>
-                                                        <td> {{ $x['examiner_2'] }}</td>
-                                                    </tr>
+                                                    @if ($name == $x['examiner_2'] || $name == $x['examiner_1'])
+                                                        <tr>
+                                                            {{-- <td> {{ $x['id'] }}</td> --}}
+                                                            <td> {{ $x['project_title'] }}</td>
+                                                            <td> {{ $x['start_date'] }}</td>
+                                                            <td> {{ $x['end_date'] }}</td>
+                                                            <td>
+                                                            <?php
+                                                            $sdate = $x['start_date'];
+                                                            $edate = $x['end_date'];
+                                                            
+                                                            $date_diff = abs(strtotime($edate) - strtotime($sdate));
+                                                            
+                                                            $years = floor($date_diff / (365 * 60 * 60 * 24));
+                                                            $months = floor(($date_diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
+                                                            $days = floor(($date_diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));
+                                                            
+                                                            printf(' %d month',  $months);
+                                                            printf("\n");
+                                                            ?>
+                                                            </td>
+                                                            <td> {{ $x['student_name'] }}</td>
+                                                            <td> {{ $x['project_type'] }}</td>
+                                                            <td> {{ $x['supervisor'] }}</td>
+                                                            <td> {{ $x['project_progress'] }}</td>
+                                                            <td> {{ $x['project_status'] }}</td>
+                                                        </tr>
                                                     @else
                                                     @endif
                                             @endforeach
@@ -136,9 +164,9 @@
 
 
 
-                </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>

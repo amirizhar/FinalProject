@@ -30,11 +30,11 @@ class updateProject extends Controller
     {
         $data=Project::find($req->id);
 
-        $data->project_title=$req->project_title;
+        // $data->project_title=$req->project_title;
         $data->start_date=$req->start_date;
         $data->end_date=$req->end_date;
         $data->duration=$req->duration;
-        $data->student_name=$req->student_name;
+        // $data->student_name=$req->student_name;
         // $data->project_type=$req->project_type;
         // $data->supervisor=$req->supervisor;
         // $data->examiner_1=$req->examiner_1;
