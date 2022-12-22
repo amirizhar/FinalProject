@@ -25,6 +25,7 @@
         </div>
 
         @include('lecturer.navbar')
+        
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <div class="main-panel">
@@ -33,7 +34,7 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Project Under Your Supervision</h4>
+                                    <h4 class="card-title">List of Project Under Your Supervision</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -48,7 +49,9 @@
                                                     <th> Duration </th>
                                                     <th> Student </th>
                                                     <th> Type </th>
-                                                    {{-- <th> Supervisor </th> --}}
+                                                    <th> Supervisor </th>
+                                                    <th> Examiner 1 </th>
+                                                    <th> Examiner 2 </th>
                                                     <th> Progress </th>
                                                     <th> Status </th>
                                                 </tr>
@@ -78,7 +81,9 @@
                                                             </td>
                                                             <td> {{ $x['student_name'] }}</td>
                                                             <td> {{ $x['project_type'] }}</td>
-                                                            {{-- <td> {{ $x['supervisor'] }}</td> --}}
+                                                            <td> {{ $x['supervisor'] }}</td>
+                                                            <td> {{ $x['examiner_1'] }}</td>
+                                                            <td> {{ $x['examiner_2'] }}</td>
                                                             <td> {{ $x['project_progress'] }}</td>
                                                             <td> {{ $x['project_status'] }}</td>
                                                         </tr>
@@ -116,6 +121,8 @@
                                                     <th> Student </th>
                                                     <th> Type </th>
                                                     <th> Supervisor </th>
+                                                    <th> Examiner 1 </th>
+                                                    <th> Examiner 2 </th>
                                                     <th> Progress </th>
                                                     <th> Status </th>
                                                 </tr>
@@ -146,6 +153,8 @@
                                                             <td> {{ $x['student_name'] }}</td>
                                                             <td> {{ $x['project_type'] }}</td>
                                                             <td> {{ $x['supervisor'] }}</td>
+                                                            <td> {{ $x['examiner_1'] }}</td>
+                                                            <td> {{ $x['examiner_2'] }}</td>
                                                             <td> {{ $x['project_progress'] }}</td>
                                                             <td> {{ $x['project_status'] }}</td>
                                                         </tr>

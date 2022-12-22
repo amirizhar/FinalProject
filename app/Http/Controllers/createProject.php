@@ -13,16 +13,6 @@ class createProject extends Controller
     {
         $output=User::all();
         return view('coordinator.createProject', ['senarai'=>$output]);
-
-        // $output = User::select('users')->where('usertype', '=', 0)->get();
-        // return view('coordinator.createProject', ['senarai'=>$output]);
-        // $output=User::select("select * from users where 'usertype' = '0' ");
-
-        // return view('coordinator.createProject');
-
-        // $output= User::table('users')
-        //             ->where('usertype', '==', 0)
-        //             ->get();
     }
 
     function addProject(Request $req)
@@ -37,8 +27,20 @@ class createProject extends Controller
         $project->student_name = $req->student_name;
         $project->project_type = $req->project_type;
         $project->supervisor = $req->supervisor;
-        $project->examiner_1 = $req->examiner_1;
-        $project->examiner_2 = $req->examiner_2;
+
+        if ($req->supervisor == $req->examiner_1) {
+            return 'Supervisor cannot be the same as examiner';
+        } else {
+            $project->examiner_1 = $req->examiner_1;
+        }
+
+        if ($req->examiner_1 == $req->examiner_2 || $req->supervisor == $req->examiner_2) {
+            return 'Please Check The Supervisor and the Examiner Back';
+        } else {
+            $project->examiner_2 = $req->examiner_2;
+        }
+
+
 
         $project->save();
 

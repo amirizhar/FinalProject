@@ -6,6 +6,11 @@
     @include('coordinator.admincss')
 </head>
 
+<?php
+$email = Auth::user()->email;
+print_r($email);
+?>
+
 <body>
     <div class="container-scroller">
         @include('coordinator.navbar')
@@ -44,7 +49,8 @@
                                                                             style='color:black; background-color:azure'
                                                                             name="project_title"
                                                                             placeholder="Project Title"
-                                                                            class="form-control" type="text" required>
+                                                                            class="form-control" type="text"
+                                                                            required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -93,7 +99,8 @@
                                                                             style='color:black; background-color:azure'
                                                                             name="student_name"
                                                                             placeholder="Student Name"
-                                                                            class="form-control" type="text" required>
+                                                                            class="form-control" type="text"
+                                                                            required>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -133,8 +140,16 @@
 
                                                                                 <option value=" ">Select</option>
                                                                                 <@foreach ($senarai as $x)
-                                                                                    <option>{{ $x['name'] }}</option>
-                                                                                    @endforeach
+                                                                                @if ($x['name'] == 'Dr Amir Izhar')
+                                                                                    <option disabled>
+                                                                                        {{ $x['name'] }}
+                                                                                    </option>
+                                                                                @else
+                                                                                    <option>
+                                                                                        {{ $x['name'] }}
+                                                                                    </option>
+                                                                                @endif
+                                                                                @endforeach
 
                                                                             </select>
                                                                         </div>
@@ -151,11 +166,19 @@
                                                                                     style='color:black; background-color:azure'
                                                                                     name="examiner_1"
                                                                                     class="form-control selectpicker">
-                                                                                    <option value=" ">Select
+                                                                                    <option value=" " required>
+                                                                                        Select
                                                                                     </option>
                                                                                     <@foreach ($senarai as $x)
-                                                                                        <option>{{ $x['name'] }}
-                                                                                        </option>
+                                                                                        @if ($x['name'] == 'Dr Amir Izhar')
+                                                                                            <option disabled>
+                                                                                                {{ $x['name'] }}
+                                                                                            </option>
+                                                                                        @else
+                                                                                            <option>
+                                                                                                {{ $x['name'] }}
+                                                                                            </option>
+                                                                                        @endif
                                                                                         @endforeach
                                                                                 </select>
                                                                             </div>
@@ -176,9 +199,16 @@
                                                                                         <option value=" ">Select
                                                                                         </option>
                                                                                         <@foreach ($senarai as $x)
-                                                                                            <option>{{ $x['name'] }}
+                                                                                        @if ($x['name'] == 'Dr Amir Izhar')
+                                                                                            <option disabled>
+                                                                                                {{ $x['name'] }}
                                                                                             </option>
-                                                                                            @endforeach
+                                                                                        @else
+                                                                                            <option>
+                                                                                                {{ $x['name'] }}
+                                                                                            </option>
+                                                                                        @endif
+                                                                                        @endforeach
                                                                                     </select>
                                                                                 </div>
                                                                             </div>

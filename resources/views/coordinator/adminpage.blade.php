@@ -26,8 +26,8 @@
                                                     <tr>
                                                         {{-- <th> id </th> --}}
                                                         <th> Title </th>
-                                                        {{-- <th> Start Date </th> --}}
-                                                        {{-- <th> End Date </th> --}}
+                                                        <th> Start Date </th>
+                                                        <th> End Date </th>
                                                         <th> Duration </th>
                                                         <th> Student </th>
                                                         <th> Type </th>
@@ -43,9 +43,23 @@
                                                         <tr>
                                                             {{-- <td> {{ $x['id'] }}</td> --}}
                                                             <td> {{ $x['project_title'] }}</td>
-                                                            {{-- <td> {{ $x['start_date'] }}</td> --}}
-                                                            {{-- <td> {{ $x['end_date'] }}</td> --}}
-                                                            <td> {{ $x['duration'] }}</td>
+                                                            <td> {{ $x['start_date'] }}</td>
+                                                            <td> {{ $x['end_date'] }}</td>
+                                                            <td>
+                                                            <?php
+                                                            $sdate = $x['start_date'];
+                                                            $edate = $x['end_date'];
+                                                            
+                                                            $date_diff = abs(strtotime($edate) - strtotime($sdate));
+                                                            
+                                                            $years = floor($date_diff / (365 * 60 * 60 * 24));
+                                                            $months = floor(($date_diff - $years * 365 * 60 * 60 * 24) / (30 * 60 * 60 * 24));
+                                                            $days = floor(($date_diff - $years * 365 * 60 * 60 * 24 - $months * 30 * 60 * 60 * 24) / (60 * 60 * 24));
+                                                            
+                                                            printf(' %d month',  $months);
+                                                            printf("\n");
+                                                            ?>
+                                                            </td>
                                                             <td> {{ $x['student_name'] }}</td>
                                                             <td> {{ $x['project_type'] }}</td>
                                                             <td> {{ $x['project_progress'] }}</td>
