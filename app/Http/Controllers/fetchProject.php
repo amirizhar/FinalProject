@@ -26,4 +26,12 @@ class fetchProject extends Controller
 
     }
 
+    function displayProject()
+    {
+
+        $output=Project::paginate(5);
+        return view('coordinator.deleteView',['list'=>$output]);
+
+    }
+
 }

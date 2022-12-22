@@ -3,9 +3,10 @@
 use App\Http\Controllers\createProject;
 use App\Http\Controllers\fetchProject;
 use App\Http\Controllers\fetchUser;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeControl;
 use App\Http\Controllers\updateProject;
+use App\Http\Controllers\deleteProject;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,11 +42,16 @@ Route::POST("/createProject", [createProject::class, "addProject"]);
 // ----------------------fetchProject--------------------------
 Route::get("/showCoordinator", [fetchProject::class, "showCoordinator"]);
 Route::get("/showLecturer", [fetchProject::class, "showLecturer"]);
+Route::get("/displayProject", [fetchProject::class, "displayProject"]);
 
 // ----------------------updateProject--------------------------
 Route::get("/updateProject", [updateProject::class, "displayProject"]);
 Route::get("upd/{id}", [updateProject::class, "showProject"]);
 Route::POST("edit", [updateProject::class, "update"]);
+
+// ----------------------deleteProject--------------------------
+Route::get("delProject/{id}", [deleteProject::class, "deleteProject"]);
+
 
 // ----------------------homeControl--------------------------
 Route::get("/deleteLecturer", [fetchUser::class, "displayDeleteLecturer"]);
