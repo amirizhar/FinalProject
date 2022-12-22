@@ -115,9 +115,6 @@
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                             <img src="assets/images/cci-prof-dr-zainuddin-hassan-01.jpg" alt="Chef #1">
                         </div>
@@ -132,9 +129,6 @@
                         <div class="thumb">
                             <div class="overlay"></div>
                             <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
                             </ul>
                             <img src="assets/images/cci-dr-asmidar-abu-bakar-01.jpg" alt="Chef #2">
                         </div>
@@ -148,11 +142,6 @@
                     <div class="chef-item">
                         <div class="thumb">
                             <div class="overlay"></div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                            </ul>
                             <img src="assets/images/cci-ts-dr-mohd-hazli-mohamed-zabil-01.jpg" alt="Chef #3">
                         </div>
                         <div class="down-content">
@@ -176,7 +165,7 @@
                             <h6>Contact Us</h6>
                             <h2>College of Computing and Informatics</h2>
                         </div>
-                        <p>Donec pretium est orci, non vulputate arcu hendrerit a. Fusce a eleifend riqsie, namei sollicitudin urna diam, sed commodo purus porta ut.</p>
+                        <br><br><br>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="phone">
