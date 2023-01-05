@@ -46,7 +46,9 @@ Route::get("/displayProject", [fetchProject::class, "displayProject"]);
 
 // ----------------------updateProject--------------------------
 Route::get("/updateProject", [updateProject::class, "displayProject"]);
+
 Route::get("/upd/{id}", [updateProject::class, "showProject"]);
+
 Route::POST("edit", [updateProject::class, "update"]);
 
 // ----------------------deleteProject--------------------------
