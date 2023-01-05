@@ -115,8 +115,6 @@
                                                 <tr>
                                                     {{-- <th> id </th> --}}
                                                     <th> Title </th>
-                                                    <th> Start Date </th>
-                                                    <th> End Date </th>
                                                     <th> Duration </th>
                                                     <th> Student </th>
                                                     <th> Type </th>
@@ -133,8 +131,6 @@
                                                         <tr>
                                                             {{-- <td> {{ $x['id'] }}</td> --}}
                                                             <td> {{ $x['project_title'] }}</td>
-                                                            <td> {{ $x['start_date'] }}</td>
-                                                            <td> {{ $x['end_date'] }}</td>
                                                             <td>
                                                             <?php
                                                             $sdate = $x['start_date'];
